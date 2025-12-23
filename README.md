@@ -32,7 +32,8 @@ bri519-final-project/
 │   └── data_saver.py        # Results saving
 ├── data/                    # Data directory (place mouseLFP.mat here)
 ├── results/                 # Output directory for results
-└── notebooks/               # Optional: Jupyter notebooks
+└── notebooks/              # Jupyter notebooks
+    └── tutorial.ipynb      # Tutorial notebook with step-by-step examples
 ```
 
 ## Installation
@@ -79,6 +80,29 @@ The analysis generates the following output files in the `results/` directory:
 
 - `analysis_results.pkl`: Pickle file containing all analysis results and parameters
 - `analysis_results.npz`: NumPy compressed archive with key data arrays
+
+### Tutorial Notebook
+
+A comprehensive tutorial notebook is available in `notebooks/tutorial.ipynb` that demonstrates:
+
+- Step-by-step usage of each module
+- How to run the complete analysis pipeline
+- Visualization examples
+- Detailed explanations of each analysis method
+
+To use the tutorial:
+
+1. Install Jupyter Notebook (if not already installed):
+```bash
+pip install jupyter
+```
+
+2. Launch Jupyter Notebook:
+```bash
+jupyter notebook notebooks/tutorial.ipynb
+```
+
+3. Follow the tutorial cells sequentially to learn how to use each module
 
 ### Module Usage
 
