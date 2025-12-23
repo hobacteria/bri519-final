@@ -1,0 +1,50 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook (except tutorial)
+.ipynb_checkpoints
+*.ipynb
+!notebooks/tutorial.ipynb
+
+# Data files (will be mounted as volume)
+data/*.mat
+data/*.pkl
+data/*.npz
+
+# Results (will be generated in container)
+results/*.pkl
+results/*.npz
+results/*.png
+results/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation
+README.md
+
+# Temporary files
+*.tmp
+*.log
+

@@ -7,10 +7,11 @@ __pycache__/
 *.ipynb
 !notebooks/tutorial.ipynb
 
-# Data files (large files)
-data/*.mat
+# Data files (large files) - allow mouseLFP.mat
 data/*.pkl
 data/*.npz
+# Allow mouseLFP.mat to be tracked
+!data/mouseLFP.mat
 
 # Results
 results/*.pkl
