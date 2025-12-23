@@ -24,11 +24,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ ./src/
 COPY main.py .
 
-# Copy data directory (if data file exists)
-COPY data/ ./data/
-
-# Create results directory
-RUN mkdir -p results
+# Create directories for data and results
+# Note: data files should be mounted as volume when running the container
+RUN mkdir -p data results
 
 # Set the entry point
 CMD ["python", "main.py"]

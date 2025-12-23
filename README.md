@@ -166,6 +166,66 @@ All original code logic and comments from the midterm notebook have been preserv
 - scipy >= 1.7.0
 - matplotlib >= 3.3.0
 
+## Docker Usage
+
+This project is containerized using Docker for reproducible execution.
+
+### Docker Hub Image
+
+The Docker image is available on Docker Hub:
+- **Image**: `hobacteria/bri519-final-project:latest`
+- **Docker Hub URL**: https://hub.docker.com/r/hobacteria/bri519-final-project
+
+### Pull and Run from Docker Hub
+
+```bash
+# Pull the image from Docker Hub
+docker pull hobacteria/bri519-final-project:latest
+
+# Run the container with data volume mount
+docker run --rm \
+  -v /path/to/your/data:/app/data \
+  -v /path/to/your/results:/app/results \
+  hobacteria/bri519-final-project:latest
+```
+
+**Note**: Replace `/path/to/your/data` with the path to your directory containing `mouseLFP.mat`, and `/path/to/your/results` with the path where you want to save the results.
+
+### Build Docker Image Locally
+
+If you want to build the image from source:
+
+```bash
+# Clone the repository
+git clone https://github.com/hobacteria/bri519-final.git
+cd bri519-final
+
+# Build the Docker image
+docker build -t bri519-final-project:latest .
+
+# Run the container
+docker run --rm \
+  -v $(pwd)/data:/app/data \
+  -v $(pwd)/results:/app/results \
+  bri519-final-project:latest
+```
+
+### Verify Docker Deployment
+
+To verify that the Docker Hub image works identically to local execution:
+
+```bash
+# Pull and run from Docker Hub
+docker pull hobacteria/bri519-final-project:latest
+docker run --rm \
+  -v $(pwd)/data:/app/data \
+  -v $(pwd)/results:/app/results \
+  hobacteria/bri519-final-project:latest
+
+# Compare results with local execution
+# The output should be identical
+```
+
 ## Notes
 
 - The original code structure and logic from the midterm assignment have been preserved
