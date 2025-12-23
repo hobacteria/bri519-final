@@ -209,6 +209,7 @@ docker run --rm \
   -v $(pwd)/results:/app/results \
   bri519-final-project:latest
 ```
+**Note**: `mouseLFP.mat` is not included in the Docker image. Please mount the directory containing `mouseLFP.mat`
 
 ### Verify Docker Deployment
 
@@ -218,8 +219,8 @@ To verify that the Docker Hub image works identically to local execution:
 # Pull and run from Docker Hub
 docker pull hobacteria/bri519-final-project:latest
 docker run --rm \
-  -v $(pwd)/data:/app/data \
-  -v $(pwd)/results:/app/results \
+  -v $(pwd)/path/to/your/data:/app/data \
+  -v $(pwd)/path/to/your/results:/app/results \
   hobacteria/bri519-final-project:latest
 
 # Compare results with local execution
