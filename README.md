@@ -226,16 +226,6 @@ docker run --rm \
 # The output should be identical
 ```
 
-## Notes
-
-- The original code structure and logic from the midterm assignment have been preserved
-- All functions maintain the original comments and implementation details
-- Visualization functions are available but can be commented out in `main.py` if not needed
-- The project follows a modular design for better maintainability and reusability
-
-## Author
-
-Kim Ho-gyun (2024022005)
 
 ## Course
 
